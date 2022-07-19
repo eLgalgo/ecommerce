@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(248, 217, 234, 0.712);
+}
+
+.logo{
+    display: flex;
+    width: 9rem;
+    margin: 1rem;
+}
+
+.lista{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+.lista li{
+    margin: 1rem;
+}
+.lista a{
+    text-decoration: none;
+    color: rgb(160, 44, 44);
+    font-size: 1.15rem;
+}
+
+.lista a:hover{
+    color: rgb(255, 0, 0);
+}

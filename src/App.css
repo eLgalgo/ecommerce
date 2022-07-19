@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/*
+Quitar
+*/
+.obraImg{
+  width: 70%;
+  margin: 1.5rem;
+  border-radius: 1rem;
+}
