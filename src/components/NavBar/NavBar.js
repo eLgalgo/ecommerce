@@ -1,5 +1,7 @@
+'use strict'
 import logo from './logo.png';
 import './NavBar.css';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar(){
     return (
@@ -11,10 +13,10 @@ function NavBar(){
                     <li><a href='#'>Sobre Nosotros</a></li>
                     <li><a href='#'>Galeria</a></li>
                     <li><a href='#'>Contacto</a></li>
+                    <li><CartWidget></CartWidget></li>
                 </ul>
             </nav>
         </header>
     )
 }
-
 export default NavBar;
