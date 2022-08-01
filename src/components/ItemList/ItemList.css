@@ -1,0 +1,15 @@
+.listaItems{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item{
+    border: rgb(10, 155, 180) solid .1px;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 1rem;
+    max-width: 40%;
+}
