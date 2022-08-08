@@ -1,7 +1,9 @@
 import { useState } from "react";
+
+
 import "./ItemCount.css"
 
-function ItemCount({ stock, initial, onAdd }){
+function ItemCount({ id, stock, initial, onAdd }){
     const [contador, setCount] = useState(initial);
     function eventMas(){
         setCount(contador + 1);

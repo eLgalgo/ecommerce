@@ -2,7 +2,7 @@ let arrayProducts = [
     {
         id:1,
         title: "Papas",
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg",
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae del",
         stock: 124, 
         price: 100
@@ -10,7 +10,7 @@ let arrayProducts = [
     {
         id:2 ,
         title: "Manzanas", 
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg",
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae deleniti alias culpaimus maiores, laborum facilis beatae! Cupiditate, a harum!",
         stock: 120, 
         price: 250
@@ -18,7 +18,7 @@ let arrayProducts = [
     {
         id:3 ,
         title: "Lapiz", 
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg",
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae deleniti alias s maiores, laborum facilis beatae! Cupiditate, a harum!",
         stock: 11, 
         price: 140
@@ -26,7 +26,7 @@ let arrayProducts = [
     {
         id:4 ,
         title: "Peras", 
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg",
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae deleniti alias culpa fugit eaque atque aspernatur placeat ducimus maiores, laborum facilis beatae! Cupiditate, a harum!",
         stock: 25, 
         price: 412
@@ -34,7 +34,7 @@ let arrayProducts = [
     {
         id:5 ,
         title: "Peras", 
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg",
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae deleniti alias culpa fugit eaque atque aspernatur placeat ducimus maiores, laborum facilis beatae! Cupiditate, a harum!",
         stock: 30, 
         price: 412
@@ -42,7 +42,7 @@ let arrayProducts = [
     {
         id:6 ,
         title: "Peras", 
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg",
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae deleniti alias culpa fugit eaque atque aspernatur placeat ducimus maiores, laborum facilis beatae! Cupiditate, a harum!",
         stock: 40,
         price: 412
@@ -50,7 +50,7 @@ let arrayProducts = [
     {
         id:7 ,
         title: "Peras", 
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg",
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png",
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae deleniti alias culpa fugit eaque atque aspernatur placeat ducimus maiores, laborum facilis beatae! Cupiditate, a harum!",
         stock: 35,
         price: 412
@@ -58,7 +58,7 @@ let arrayProducts = [
     {
         id:8 ,
         title: "Peras", 
-        imageUrl:"/static/media/github.64fa1d1c4801d931c3717be71f6c020e.svg", 
+        imageUrl:"http://assets.stickpng.com/images/580b57fcd9996e24bc43c1a7.png", 
         description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga inventore, at nulla eos repudiandae deleniti alias culpa fugit eaque atque aspernatur placeat ducimus maiores, laborum facilis beatae! Cupiditate, a harum!",
         stock: 10,
         price: 412
@@ -75,5 +75,23 @@ const getFetch = new Promise((resolve, reject)=>{
         reject(console.log("Error en la promesa"))
     }
 })
+
+export const getProductById = (id) =>{
+    return new Promise((resolve, reject)=>{
+            resolve(arrayProducts.filter(prod => {
+                if((prod.id == id)){
+                    return prod
+                }
+            }))
+    }) 
+}
+
+export const getProduct = () =>{
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            resolve(arrayProducts.filter(prod => prod))
+        }, 0)
+    }) 
+}
 
 export default getFetch;
