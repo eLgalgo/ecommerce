@@ -1,5 +1,5 @@
 'use strict'
-import logo from './iconoCart.svg';
+import logo from './iconoCart.png';
 import './CartWidget.css'
 
 function CartWidget(){

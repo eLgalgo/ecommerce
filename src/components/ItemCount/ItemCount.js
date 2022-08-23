@@ -6,7 +6,10 @@ import "./ItemCount.css"
 function ItemCount({ id, stock, initial, onAdd }){
     const [contador, setCount] = useState(initial);
     function eventMas(){
-        setCount(contador + 1);
+        if(contador < stock){
+            setCount(contador + 1);
+        }
+
     }
     function eventMenos(){
         setCount(contador - 1);

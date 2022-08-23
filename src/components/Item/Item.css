@@ -1,3 +1,14 @@
 img{
-    width: 50%;
+    border-radius: 1rem;
+}
+.containerImg{
+    padding: 1rem;
+}
+.priceItem{
+    color: green;
+    font-size: 2rem;
+}
+.item{
+    display: flex;
+    align-content: center;
 }

@@ -8,12 +8,12 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(248, 217, 234, 0.712);
+    background-color: #ffec5fde;
 }
 
 .logo{
     display: flex;
-    width: 9rem;
+    width: 7rem;
     margin: 1rem;
 }
 
@@ -21,18 +21,33 @@
     list-style: none;
     display: flex;
     flex-direction: row;
-    align-items: center;
     text-decoration: none;
+    justify-content: end;
+    
 }
-.lista li{
-    margin: 1rem;
+.opcionNav{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    max-width: 190px;
+    margin-bottom: 10px;
 }
 .lista a{
     text-decoration: none;
     color: rgb(160, 44, 44);
     font-size: 1.15rem;
+    font-weight: bold;
 }
 
 .lista a:hover{
     color: rgb(255, 0, 0);
+}
+
+.liCart{
+    max-width: 120px;
+    margin: 1rem;
+}
+
+.imgNav{
+    width: 25%;
 }

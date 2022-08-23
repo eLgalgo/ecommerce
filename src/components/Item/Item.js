@@ -6,11 +6,13 @@ import "./Item.css"
 export function Item(props){
     return(
         <>
-            <div>
+            <div className="containerItem">
                 <h2 className="titleItem">{props.title}</h2>
-                <img src={props.imageUrl}/>
+                <div className="containerImg">
+                    <img className="img-fluid" src={props.imageUrl}/>
+                </div>
                 <p>{props.description}</p>
-                <h3>Precio: {props.price}</h3>
+                <h3 className="priceItem">{props.price} $</h3>
                 
                 <Link to={`/detail/${props.id}`}>
                     <button className="btnAdd col">Ver detalles</button>
