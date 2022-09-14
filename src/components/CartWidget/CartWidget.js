@@ -1,11 +1,21 @@
-'use strict'
-import logo from './iconoCart.png';
-import './CartWidget.css'
+import React, { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
+import { BsFillCartFill } from "react-icons/bs";
 
-function CartWidget(){
-    return(
-        <a href='#' className='carritoImg'><img src= {logo}/></a>
-    )
+export default function CartWidget() {
+	const [cartItems] = useContext(CartContext);
+
+	const totalItems = cartItems.reduce(
+		(total, item) => total + item.cantidad,
+		0
+	);
+
+	return (
+		<div>
+			<BsFillCartFill />
+			{totalItems !== 0 && (
+				<span style={{ fontSize: "0.8em" }}> {totalItems}</span>
+			)}
+		</div>
+	);
 }
-
-export default CartWidget;

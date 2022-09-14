@@ -26,9 +26,6 @@ function ItemCount({ id, stock, initial, onAdd }){
                 <input type="number" className="col-6 inputNumber" value={contador}/>
                 <button onClick={eventMas} type="button" className="col btnCount">+</button>
             </div>
-            <div className="addCarrito row">
-                <button onClick={btnAdd} className="btnAdd col">Agregar al carrito</button>
-            </div>
 
         </div>
     )

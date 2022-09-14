@@ -1,24 +1,19 @@
-
+import React from "react";
 import { Link } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
+import "./Item.css";
 
-import "./Item.css"
+const Item = ({ data }) => (
+	<Card className="cardContainer">
+		<Card.Img className="cardImage" src={data.linkimage} />
+		<Card.Body className="cardBody">
+			<Card.Title className="cardTitle">{data.nombre}</Card.Title>
+			<Card.Text className="cardPrice">$ {data.price}</Card.Text>
+			<Link to={`/detalle/${data.id}`} style={{ textDecoration: "none" }}>
+				<Button className="cardVerMas">Ver más detalles</Button>
+			</Link>
+		</Card.Body>
+	</Card>
+);
 
-export function Item(props){
-    return(
-        <>
-            <div className="containerItem">
-                <h2 className="titleItem">{props.title}</h2>
-                <div className="containerImg">
-                    <img className="img-fluid" src={props.imageUrl}/>
-                </div>
-                <p>{props.description}</p>
-                <h3 className="priceItem">{props.price} $</h3>
-                
-                <Link to={`/detail/${props.id}`}>
-                    <button className="btnAdd col">Ver detalles</button>
-                </Link>
-                {/* <ItemCount id={props.id} stock={props.stock} initial={1} onAdd={(cantidad)=>{alert(`Se agregaron ${cantidad} items a su carrito`)}}/> */}
-            </div>
-        </>
-    );
-}
+export default Item;

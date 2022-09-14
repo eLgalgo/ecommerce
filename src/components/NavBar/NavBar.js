@@ -15,7 +15,7 @@ function NavBar(){
                 </Link>
                 <ul  className= "lista">
                     <li className='opcionNav'>
-                        <a href='#'>Burgers</a>
+                        <a href='#'>Burgers</a> 
                         <img className='imgNav' src={img1}/>
                     </li>
                     <li className='opcionNav'>
